@@ -1155,7 +1155,7 @@ button1:hover {
 <script>
   function getvisitor(){
               var xhr = new XMLHttpRequest();
-              var url = 'https://api.countapi.xyz/hit/api-alphabot.herokuapp.com/visits';
+              var url = 'https://api.countapi.xyz/hit/botpage.github.io/landing';
               xhr.onloadend = function(){
              data = JSON.parse(this.responseText);
   document.getElementById("visitor").textContent = data.value
@@ -1175,10 +1175,10 @@ document.getElementById("jam").innerHTML = tanggal.getHours()+":"+tanggal.getMin
 }
 </script>
 <script>
-				// Akhir Hitungan Mundur
+				// Fin Cuenta Regresiva
 				var countDownDate = new Date("Dec 21, 2021 00:00:00").getTime();
 
-				// Update Hitungan Mundur Setiap 1 Detik
+				// Actualizar cuenta regresiva cada 1 segundo
 				var x = setInterval(function() {
 
 					// Mengambil Tanggal Dan Waktu
@@ -1268,11 +1268,11 @@ const check_match = () => {
 const check_for_winner = () => {
   let res = check_match()
   if (res == player) {
-    winner.innerText = "You Win Apikey: Alphabot";
+    winner.innerText = "You Win Apikey: DrkBot";
     winner.classList.add("playerWin");
     board_full = true
   } else if (res == computer) {
-    winner.innerText = "Awokawok Kalah Ama Komputer:v";
+    winner.innerText = "Acabas de perder: :(";
     winner.classList.add("computerWin");
     board_full = true
   } else if (board_full) {
