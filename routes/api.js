@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creator = "ঔৣ͜͡➳DarkBox"
+var creator = "ian-darkbox"
 var ytdl = require('ytdl-core');
 var ytpl = require('ytpl');
 var secure = require('ssl-express-www');
@@ -41,74 +41,74 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter apikey',
+        message: 'error Apikey',
         getApikey: 'Apikey??? Contact Me On WhatsApp'
     },
     notkey: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter key'
+        message: 'error Apikey'
     },
     noturl: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter url'
+        message: 'error parametros url'
     },
     notkata: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter kata'
+        message: 'error palabra'
     },
     nottext: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter text'
+        message: 'error parametros de text'
     },
     nottext2: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter text2'
+        message: 'error parametros text2'
     },
     notnabi: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter nabi'
+        message: 'ingrese parametros del profeta'
     },
     nottext3: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter text3'
+        message: 'error parametros text3'
     },
     nottheme: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter theme'
+        message: 'parametros temas de entrada'
     },
     notusername: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter username'
+        message: 'error parametros username'
     },
     notvalue: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter value'
+        message: 'error parametros de valor'
     },
     notheme: {
     	status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'theme tidak tersedia silahkan masukkan texmaker/list atau baca documentasi'
+        message: 'tema no disponible ingrese texmaker / leer documentación'
      },
     invalidKey: {
         status: false,
@@ -119,23 +119,23 @@ loghandler = {
     invalidlink: {
         status: false,
         creator: `${creator}`,
-        message: 'error, mungkin link anda tidak valid.'
+        message: 'error, tal vez clave invalida.'
     },
     invalidkata: {
         status: false,
         creator: `${creator}`,
-        message: 'error, mungkin kata tidak ada dalam api.'
+        message: 'error, tal vez la palabra no esta en la api.'
     },
     notAddApiKey: {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'masukan parameter status, apikeyInput, email, nomorhp, name, age, country, exp'
+        message: 'estado parametros de entrada, apikeyInput, email, num, nombre, edad, pais, exp'
     },
     error: {
         status: false,
         creator: `${creator}`,
-        message: 'mungkin sedang dilakukan perbaikan'
+        message: 'tal vez está en reparacion'
     }
 }
 
@@ -1045,7 +1045,7 @@ router.get('/tiktod/stalk', async (req, res, next) => {
         username = req.query.username
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'Alphabot') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'DrkBot') return res.json(loghandler.invalidKey)
     if (!username) return res.json(loghandler.notusername)
 
 
@@ -1061,7 +1061,7 @@ router.get('/tiktod/stalk', async (req, res, next) => {
              res.json({
                  status : false,
                  creator : `${creator}`,
-                 message : "error, mungkin username anda tidak valid"
+                 message : "error, tal vez el username no sea valido"
              })
          })
 })
@@ -3265,14 +3265,14 @@ router.get('/ig/stalk', async (req, res, next) => {
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'DrkBot') return res.json(loghandler.invalidKey)
-    if (!username) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
+    if (!username) return res.json({ status : false, creator : `${creator}`, message : "ingresar username"})
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/stalk?username=${username}`))
         .then(response => response.json())
         .then(data => {
         var result = data;
              res.json({
-             	author: 'ঔৣ͜͡➳DarkBox',
+             	author: 'ian-darkbox',
                  result
              })
          })
@@ -3331,7 +3331,7 @@ router.get('/github/stalk', async (req, res, next) => {
             username = req.query.username
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'Alphabot') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'DekBot') return res.json(loghandler.invalidKey)
     if (!username) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter username"})
 
        fetch(encodeURI(`https://github-api-zhirrr.vercel.app/api/detailuser?q=${username}`))
@@ -3352,7 +3352,7 @@ router.get('/repository/stalk', async (req, res, next) => {
             username = req.query.username
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'Alphabot') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'DrkBot') return res.json(loghandler.invalidKey)
     if (!username) return res.json({ status : false, creator : `${creator}`, message : "masukan nama repository yang ingin kamu cari"})
 
        fetch(encodeURI(`https://github-api-zhirrr.vercel.app/api/searchrepo?q=${username}`))
